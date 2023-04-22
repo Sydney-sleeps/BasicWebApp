@@ -1,2 +1,2 @@
-# [title of your app]
-[description/guide for your app]
+# General Trivia Questions
+Answer some multiple choice type questions
