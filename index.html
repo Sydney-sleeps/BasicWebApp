@@ -24,7 +24,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
   <!--Formatting source information and webpage title.-->
   <head>
-    <title>APP NAME GOES HERE</title>
+    <title>General Trivia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="w3.css">
@@ -35,35 +35,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!--Javascript code.-->
 <script>
-	var exampleVariable1 = 0;
-	var exampleVariable2 = 0;
+	var correct_count = 0;
+	var incorrect_count = 0;
 	var exampleVariable3 = 0;
 	
-	function exampleFunction1()
+	function correctAdd() //fucntion to count correct//
 	{
-		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 + exampleVariable2;
-		
-		alert("You just ran an addition function!");
-		console.log("Addition function was run.");
+		correct_count = correct_count +1;
 	}
 	
-	function exampleFunction2()
+	function incorrectAdd() //fucntion to count incorrect//
 	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 * exampleVariable2;
-		
-		alert("You just ran a multiplication function!");
-		console.log("Multiplication function was run.");
+		incorrect_count = incorrect_count +1;
 	}
 	
 	function exampleFunction3()
 	{
+		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
     		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
 		
@@ -73,16 +61,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		console.log("Exponent function was run.");
 	}
 	
-	function exampleResultsFunction()
+	function ResultsFunction()
 	{
-		document.getElementById("endResults").innerHTML = "Your final result is: " + exampleVariable3;
+		document.getElementById("endResults").innerHTML = "Your final result is: " + correct_count + " correct and " + incorrect_count + " incorrect";
 		resetVariables();
 	}
 	
 	function resetVariables()
 	{
-		exampleVariable1 = 0;
-		exampleVariable2 = 0;
+		correct_count = 0;
+		incorrect_count = 0;
 		exampleVariable3 = 0;
 	}
 </script>
@@ -120,10 +108,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <div id="content" class="w3-container">
   	<!--Header!-->
 	<div id="header" class="w3-container w3-wisteria">
-		<h1>APP NAME GOES HERE</h1>
+		<h1>General Trivia</h1>
 	</div>
 	
-	  <p>INTRODUCTION/DESCRIPTION OF APP GOES HERE</p>
+	  <p>Answer some general trivia questions to see how knowledgeable you are!</p>
 	
 	  <a href="#one" class="w3-btn w3-grey w3-round">Get Started!</a>
 	
