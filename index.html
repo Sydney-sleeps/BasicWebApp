@@ -61,9 +61,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		console.log("Exponent function was run.");
 	}
 	
-	function ResultsFunction()
+	function resultsFunction()
 	{
-		document.getElementById("endResults").innerHTML = "Your final result is: " + correct_count + " correct and " + incorrect_count + " incorrect";
+		var correctPercent = (correct_count / (correct_count + incorrect_count)) * 100;
+		var incorrectPercent = (incorrect_count / (correct_count + incorrect_count)) * 100;
+		document.getElementById("endResults").innerHTML = "Your final result is: " + correctPercent + "% correct and " + incorrectPercent + "% incorrect";
 		resetVariables();
 	}
 	
@@ -128,38 +130,134 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <center>
     
     	<div id="content2" class="w3-container">
-        	<p>QUESTION 1 GOES HERE</p>    
+        	<p>True or False? There are twice as many chickens in the world than humans.</p>    
     	</div>
 	
-	<!--Form element. This allows for user input in HTML.-->
-	<form>
+ 	<!--Form element. This allows for user input in HTML.-->
+<!-- 	<form> -->
 		<!--Label for first input field.-->
-		<label for="firstInputBox">Enter a number:</label><br>
+<!-- 		<label for="firstInputBox">Enter a number:</label><br> -->
 		<!--User input box.-->
-		<input type="number" id="firstInputBox" value="0"><br>
+<!-- 		<input type="number" id="firstInputBox" value="0"><br> -->
 		<!--Label for second input field.-->
-		<label for="secondInputBox">Enter another number:</label><br>
+<!-- 		<label for="secondInputBox">Enter another number:</label><br> -->
 		<!--User input box.-->
-		<input type="number" id="secondInputBox" value="0">
+<!-- 		<input type="number" id="secondInputBox" value="0"> -->
 		
-		<br><br><br>
-	</form>
-      
-  <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Button 1</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
-  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a>
+<!-- 		<br><br><br> -->
+<!-- 	</form> -->
+	  
+  <a href="#two" onclick="correctAdd();" class="w3-btn w3-grey">True</a>
+  <a href="#two" onclick="incorrectAdd();" class="w3-btn w3-grey">False</a>
+<!--   <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a> -->
     
   </center>
 </div>  
   
   
-  
+  <!--SECOND SUBPAGE-->
+<div id="two" class="page">
+	<div id="header2" class="w3-container w3-wisteria">
+		<h1>Question 2</h1>
+	</div>
+	
+  <center>
+    
+    	<div id="content2" class="w3-container">
+        	<p>How many times did the Americans go to the moon during the 1960's?</p>    
+    	</div>
 
+  <a href="#three" onclick="incorrectAdd();" class="w3-btn w3-grey">Once</a>
+  <a href="#three" onclick="correctAdd();" class="w3-btn w3-grey">Twice</a>
+  <a href="#three" onclick="incorrectAdd();" class="w3-btn w3-grey">Three Times</a>
+
+    
+  </center>
+</div>  
+
+  <!--THIRD SUBPAGE-->
+<div id="three" class="page">
+	<div id="header2" class="w3-container w3-wisteria">
+		<h1>Question 3</h1>
+	</div>
+	
+  <center>
+    
+    	<div id="content2" class="w3-container">
+        	<p>When did Van Gogh create the painting "The Starry Night"?</p>    
+    	</div>
 	  
+  <a href="#four" onclick="incorrectAdd();" class="w3-btn w3-grey">1887</a>
+  <a href="#four" onclick="correctAdd();" class="w3-btn w3-grey">1889</a>
+  <a href="#four" onclick="incorrectAdd();" class="w3-btn w3-grey">1890</a>
+
+
+    
+  </center>
+</div>  
 	  
+  <!--FOURTH SUBPAGE-->
+<div id="four" class="page">
+	<div id="header2" class="w3-container w3-wisteria">
+		<h1>Question 4</h1>
+	</div>
+	
+  <center>
+    
+    	<div id="content2" class="w3-container">
+        	<p>Which British rock band was the most popular during the 1960's?</p>    
+    	</div>
 	  
+  <a href="#five" onclick="incorrectAdd();" class="w3-btn w3-grey">The Who</a>
+  <a href="#five" onclick="incorrectAdd();" class="w3-btn w3-grey">Rolling Stones</a>
+  <a href="#five" onclick="correctAdd();" class="w3-btn w3-grey">The Beatles</a>
+
+
+    
+  </center>
+</div>  
 	  
+  <!--FIFTH SUBPAGE-->
+<div id="five" class="page">
+	<div id="header2" class="w3-container w3-wisteria">
+		<h1>Question 5</h1>
+	</div>
+	
+  <center>
+    
+    	<div id="content2" class="w3-container">
+        	<p>What is a group of mice called?</p>    
+    	</div>
 	  
+  <a href="#six" onclick="incorrectAdd();" class="w3-btn w3-grey">Colony</a>
+  <a href="#six" onclick="incorrectAdd();" class="w3-btn w3-grey">Scurry</a>
+  <a href="#six" onclick="correctAdd();" class="w3-btn w3-grey">Mischief</a>
+
+
+    
+  </center>
+</div>  
+
+  <!--SIXTH SUBPAGE-->
+<div id="six" class="page">
+	<div id="header2" class="w3-container w3-wisteria">
+		<h1>Question 6</h1>
+	</div>
+	
+  <center>
+    
+    	<div id="content2" class="w3-container">
+        	<p>What is the average length of a giraffe tounge?</p>    
+    	</div>
+	  
+  <a href="#finalpage" onclick="correctAdd();" class="w3-btn w3-grey">18 inches</a>
+  <a href="#finalpage" onclick="incorrectAdd();" class="w3-btn w3-grey">24 inches</a>
+  <a href="#finalpage" onclick="incorrectAdd();" class="w3-btn w3-grey">30 inches</a>
+
+
+    
+  </center>
+</div>  
 	  
 	  
 	  
@@ -167,19 +265,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!--LAST SUBPAGE-->
 <div id="finalpage" class="page">
 	<div id="finalheader" class="w3-container w3-wisteria">
-		<h1>FINAL PAGE TITLE GOES HERE</h1>
+		<h1>Results</h1>
 	</div>
 	
   <center>
     
 	  <div id="finalcontent" class="w3-container">
-		  <p id="endResults">FINAL PAGE CONTENT GOES HERE</p>
+		  <p id="endResults">How well did you do?</p>
 	  </div>
   
-  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
-    <br>
-    <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
-  </a>
+<!--   <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me! -->
+<!--     <br> -->
+<!--     <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob"> -->
+<!--   </a> -->
+  <a onclick="resultsFunction();" class="w3-btn w3-grey w3-round"> Results </a>
   <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
     
   </center>
