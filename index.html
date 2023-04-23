@@ -158,18 +158,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		{
 			incorrect_count = incorrect_count +1;
 		}	
-			function cond() {
-				var a=document.getElementById("nm").value;
-				if(a=="t") {
-					correctAdd();
-				}
-				else(a=="f") {
-				incorrectAdd();
-				}
+		function condition() 
+		{
+		var a=document.getElementById("nm").value;
+		if(a=="t") {
+			correctAdd();
+		}
+		else(a=="f") {
+			incorrectAdd();
+		}
+		}
  		<br><br><br>
 	</form>
 		</script>
-		  <a href="#two" onclick="cond();" class="w3-btn w3-purple">Ok</a>
+		  <a href="#two" onclick="condition();" class="w3-btn w3-purple">Ok</a>
 <!-- <a href="#two" onclick="correctAdd();" class="w3-btn w3-purple">True</a> -->
 <!-- <a href="#two" onclick="incorrectAdd();" class="w3-btn w3-purple">False</a> -->
 <!--   <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a> -->
