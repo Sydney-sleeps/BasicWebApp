@@ -14,7 +14,7 @@ Authors in chronological order of contribution:
 Further Information:
   http://cns.utexas.edu/fri
 
-Brief summary of this code: [...]
+Brief summary of this code: After the user answers questions by pressing buttons, it leads to the next subpage
 
 Known issues: [...]
 
@@ -135,21 +135,34 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div>
 	
  	<!--Form element. This allows for user input in HTML.-->
-<!-- 	<form> -->
+	<form>
 		<!--Label for first input field.-->
-<!-- 		<label for="firstInputBox">Enter a number:</label><br> -->
+<!--  		<label for="firstInputBox">Enter T or F:</label><br> -->
 		<!--User input box.-->
-<!-- 		<input type="number" id="firstInputBox" value="0"><br> -->
+<!--  		<input type="text" id="firstInputBox" value="0"><br> -->
 		<!--Label for second input field.-->
-<!-- 		<label for="secondInputBox">Enter another number:</label><br> -->
+<!--  		<label for="secondInputBox">Enter another number:</label><br> -->
 		<!--User input box.-->
-<!-- 		<input type="number" id="secondInputBox" value="0"> -->
-		
-<!-- 		<br><br><br> -->
-<!-- 	</form> -->
-	  
-  <a href="#two" onclick="correctAdd();" class="w3-btn w3-purple">True</a>
-  <a href="#two" onclick="incorrectAdd();" class="w3-btn w3-purple">False</a>
+<!--  		<input type="number" id="secondInputBox" value="0"> -->
+		<input type="text" placeholder="Enter T or F:" id"mn">
+		<script>
+		function cond() {
+			var a=document.getElementById("nm").value;
+			if(a=="t") {
+				correctAdd();
+			}
+			else if(a=="f") {
+				incorrectAdd();
+			}
+			else{
+				document.write("Invalid Response");
+			}
+ 		<br><br><br>
+	</form>
+		</script>
+		  <a href="#two" onclick="cond();" class="w3-btn w3-purple">Ok</a>
+<!-- <a href="#two" onclick="correctAdd();" class="w3-btn w3-purple">True</a> -->
+<!-- <a href="#two" onclick="incorrectAdd();" class="w3-btn w3-purple">False</a> -->
 <!--   <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a> -->
     
   </center>
