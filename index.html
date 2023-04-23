@@ -146,14 +146,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!--  		<input type="number" id="secondInputBox" value="0"> -->
 		<input type="text" placeholder="Enter T or F:" id"mn">
 		<script>
-		function cond() {
-			var a=document.getElementById("nm").value;
-			if(a=="t") {
-				correctAdd();
-			}
-			else(a=="f") {
+		var correct_count = 0;
+		var incorrect_count = 0;
+	
+		function correctAdd() //fucntion to count correct//
+		{
+			correct_count = correct_count +1;
+		}
+	
+		function incorrectAdd() //fucntion to count incorrect//
+		{
+			incorrect_count = incorrect_count +1;
+		}	
+			function cond() {
+				var a=document.getElementById("nm").value;
+				if(a=="t") {
+					correctAdd();
+				}
+				else(a=="f") {
 				incorrectAdd();
-			}
+				}
  		<br><br><br>
 	</form>
 		</script>
