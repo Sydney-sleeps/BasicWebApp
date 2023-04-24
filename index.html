@@ -14,9 +14,9 @@ Authors in chronological order of contribution:
 Further Information:
   http://cns.utexas.edu/fri
 
-Brief summary of this code: After the user answers questions by pressing buttons, it leads to the next subpage
+Brief summary of this code: After the user answers questions by pressing buttons, it leads to the next subpage and calculates the score of the user input
 
-Known issues: [...]
+Known issues: the variable a had issues with setting the value of the user input
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -49,17 +49,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		incorrect_count = incorrect_count +1;
 	}
 	
-	function exampleFunction3()
-	{
-		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
+// 	function exampleFunction3() //example code
+// 	{
+// 		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
+// 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
+//     		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
 		
-		exampleVariable3 = exampleVariable1 ** exampleVariable2;
+// 		exampleVariable3 = exampleVariable1 ** exampleVariable2;
 		
-		alert("You just ran an exponent function!");
-		console.log("Exponent function was run.");
-	}
+// 		alert("You just ran an exponent function!");
+// 		console.log("Exponent function was run.");
+// 	}
 	
 	function resultsFunction()
 	{
@@ -73,7 +73,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	{
 		correct_count = 0;
 		incorrect_count = 0;
-		exampleVariable3 = 0;
+// 		exampleVariable3 = 0;
 	}
 </script>
   
@@ -145,23 +145,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--User input box.-->
 <!--  		<input type="number" id="secondInputBox" value="0"> -->
 		<input type="text" placeholder="Enter T or F:" id="tf">
+<!-- 		javascript code -->
 		<script>
-		var correct_count = 0;
-		var incorrect_count = 0;
+// 		var correct_count = 0;
+// 		var incorrect_count = 0;
 	
-		function correctAdd() //fucntion to count correct//
-		{
-			correct_count = correct_count +1;
-		}
+// 		function correctAdd() //fucntion to count correct//
+// 		{
+// 			correct_count = correct_count +1;
+// 		}
 	
-		function incorrectAdd() //fucntion to count incorrect//
-		{
-			incorrect_count = incorrect_count +1;
-		}	
-		function condition() 
+// 		function incorrectAdd() //fucntion to count incorrect//
+// 		{
+// 			incorrect_count = incorrect_count +1;
+// 		}	
+		function condition() //conditional statement that depends on the user input
 		{
 		var a=document.getElementById("tf").value;
-		console.log("a equals" + a);
+		console.log("a equals" + a); //making sure the a value is correct
 		if(a=="t") {
 			correctAdd();
 		}
@@ -281,9 +282,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         	<p>What is the average length of a giraffe tongue?</p>    
     	</div>
 	  
-  <a href="#finalpage" onclick="correctAdd();" class="w3-btn w3-purple">18 inches</a>
-  <a href="#finalpage" onclick="incorrectAdd();" class="w3-btn w3-purple">24 inches</a>
-  <a href="#finalpage" onclick="incorrectAdd();" class="w3-btn w3-purple">30 inches</a>
+  <a href="#seven" onclick="correctAdd();" class="w3-btn w3-purple">18 inches</a>
+  <a href="#seven" onclick="incorrectAdd();" class="w3-btn w3-purple">24 inches</a>
+  <a href="#seven" onclick="incorrectAdd();" class="w3-btn w3-purple">30 inches</a>
 
 
     
@@ -291,6 +292,61 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>  
 	  
 	  
+	  
+  <!--SEVENTH SUBPAGE-->
+<div id="seven" class="page">
+	<div id="header2" class="w3-container w3-flat-wisteria">
+		<h1>Question 7</h1>
+	</div>
+	
+  <center>
+    
+    	<div id="content2" class="w3-container">
+		<img src="https://cdn.discordapp.com/attachments/798340844457426974/1100157087423676456/original.png" class = "w3-round" alt="toad" style="width:500px;height:400px;">
+        	<p>Do toads have teeth?</p>    
+    	</div>
+	  
+	<form>
+		<!--Label for first input field.-->
+<!--  		<label for="firstInputBox">Enter T or F:</label><br> -->
+		<!--User input box.-->
+<!--  		<input type="text" id="firstInputBox" value="0"><br> -->
+		<!--Label for second input field.-->
+<!--  		<label for="secondInputBox">Enter another number:</label><br> -->
+		<!--User input box.-->
+<!--  		<input type="number" id="secondInputBox" value="0"> -->
+		<input type="text" placeholder="Enter T or F:" id="tf">
+<!-- 		javascript code -->
+<!-- 		<script>
+// 		var correct_count = 0;
+// 		var incorrect_count = 0;
+	
+// 		function correctAdd() //fucntion to count correct//
+// 		{
+// 			correct_count = correct_count +1;
+// 		}
+	
+// 		function incorrectAdd() //fucntion to count incorrect//
+// 		{
+// 			incorrect_count = incorrect_count +1;
+// 		}	
+		function condition() //conditional statement that depends on the user input
+		{
+		var a=document.getElementById("tf").value;
+		console.log("a equals" + a); //making sure the a value is correct
+		if(a=="t") {
+			correctAdd();
+		}
+		else{
+			incorrectAdd();
+		}
+		}
+		</script> -->
+ 		<br><br><br>
+	</form>
+		  <a href="#two" onclick="condition();" class="w3-btn w3-purple">Ok</a>
+  </center>
+</div>  
 	  
 	  
 <!--LAST SUBPAGE-->
