@@ -160,7 +160,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		}	
 		function condition() 
 		{
-		let a=document.getElementById("tf").innerHTML;
+		var a=document.getElementById("tf").value;
+		console.log("a equals" + a);
 		if(a=="t") {
 			correctAdd();
 		}
