@@ -144,7 +144,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!--  		<label for="secondInputBox">Enter another number:</label><br> -->
 		<!--User input box.-->
 <!--  		<input type="number" id="secondInputBox" value="0"> -->
-		<input type="text" placeholder="Enter T or F:" id="mn">
+		<input type="text" placeholder="Enter T or F:" id="tf">
 		<script>
 		var correct_count = 0;
 		var incorrect_count = 0;
@@ -160,7 +160,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		}	
 		function condition() 
 		{
-		var a=document.getElementById("mn").value;
+		let a=document.getElementById("tf").innerHTML;
 		if(a=="t") {
 			correctAdd();
 		}
