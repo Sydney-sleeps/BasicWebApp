@@ -147,18 +147,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<input type="text" placeholder="Enter T or F:" id="tf">
 <!-- 		javascript code -->
 		<script>
-// 		var correct_count = 0;
-// 		var incorrect_count = 0;
-	
-// 		function correctAdd() //fucntion to count correct//
-// 		{
-// 			correct_count = correct_count +1;
-// 		}
-	
-// 		function incorrectAdd() //fucntion to count incorrect//
-// 		{
-// 			incorrect_count = incorrect_count +1;
-// 		}	
 		function condition() //conditional statement that depends on the user input
 		{
 		var a=document.getElementById("tf").value;
@@ -171,7 +159,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		}
 		}
 		</script>
-<!--  		<br><br><br> -->
+ 		<br>
 	</form>
 		  <a href="#two" onclick="condition();" class="w3-btn w3-purple">Ok</a>
 <!-- <a href="#two" onclick="correctAdd();" class="w3-btn w3-purple">True</a> -->
@@ -307,42 +295,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div>
 	  
 	<form>
-		<!--Label for first input field.-->
-<!--  		<label for="firstInputBox">Enter T or F:</label><br> -->
-		<!--User input box.-->
-<!--  		<input type="text" id="firstInputBox" value="0"><br> -->
-		<!--Label for second input field.-->
-<!--  		<label for="secondInputBox">Enter another number:</label><br> -->
-		<!--User input box.-->
-<!--  		<input type="number" id="secondInputBox" value="0"> -->
-		<input type="text" placeholder="Enter T or F:" id="tf">
+		<input type="text" placeholder="Enter T or F:" id="ft">
 <!-- 		javascript code -->
-<!-- 		<script>
-// 		var correct_count = 0;
-// 		var incorrect_count = 0;
-	
-// 		function correctAdd() //fucntion to count correct//
-// 		{
-// 			correct_count = correct_count +1;
-// 		}
-	
-// 		function incorrectAdd() //fucntion to count incorrect//
-// 		{
-// 			incorrect_count = incorrect_count +1;
-// 		}	
+		<script>
 		function condition() //conditional statement that depends on the user input
 		{
-		var a=document.getElementById("tf").value;
-		console.log("a equals" + a); //making sure the a value is correct
-		if(a=="t") {
+		var b=document.getElementById("ft").value;
+		console.log("b equals" + b); //making sure the a value is correct
+		if(b=="f") {
 			correctAdd();
 		}
 		else{
 			incorrectAdd();
 		}
 		}
-		</script> -->
-<!--  		<br><br><br> -->
+		</script>
+ 		<br>
 	</form>
 		  <a href="#finalpage" onclick="condition();" class="w3-btn w3-purple">Ok</a>
   </center>
